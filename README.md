@@ -14,7 +14,7 @@ In this we will be adding Data Assets to handle and update different types of am
 ## Hints  
 
 ### Reloading - TP_WeaponComponent.cpp
-This script has the main functioanality for the reloading system, you will need to complete the Reload function.
+This script has the main functionality for the reloading system, you will need to complete the Reload function.
 
 I have built you a simple delay system and the Fire Method is what you want to edit. Remember to contianrise the functionality, if it's to do with the weapon have it here or in a subclass if it's starting to get too complicated.
 
@@ -64,6 +64,7 @@ public:
 	int Damage;
 ```
 ### Input system and binding
+Notice, the input binding for the shooting is on the weapon not the player. 
 
 ### Data Assets for Ammo Types
 Note, the data assets are based on a Struct, which means the Primary Data Asset is a C++ file.
@@ -75,6 +76,7 @@ Test your might
 - Add a new ammo type, with different damage and max ammo capacity.
 - Create a new Data Asset Ammo and add to your game.
 - Add in a default ammo type that the player reverts to if they run out of ammo for their current weapon or reload with the specail ammo. Think Left 4 Dead, pistols when you get specail ammo.
+- Currently we pick up ammo to reload, it would be a good showcase if you made a reserve and added a reload input binding,
 
 ## Medium
 - Add one new attribute to the ammo type that effects the projectile, e.g. Mass/ impact force, Range, Speed or number of bounces.

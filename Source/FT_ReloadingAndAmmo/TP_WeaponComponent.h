@@ -41,7 +41,7 @@ public:
 
 	/** How much ammo have we got */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ammo", meta = (AllowPrivateAccess = "true"))
-	int AmmoInClip;
+	int AmmoInClip = 10;
 	/** How damage can we do */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ammo", meta = (AllowPrivateAccess = "true"))
 	int Damage;

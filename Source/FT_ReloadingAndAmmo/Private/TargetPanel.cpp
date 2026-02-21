@@ -26,7 +26,7 @@ void ATargetPanel::BeginPlay()
 	// add a random direction for the target to move in if bIsMoving is true
 	if (bIsMoving)
 	{		
-		if (FMath::RandRange(0, 2) == 0)
+		if (FMath::RandRange(0, 1) == 0)
 		{
 			MoveDirection = 1;
 		}

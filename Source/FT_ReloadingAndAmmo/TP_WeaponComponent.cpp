@@ -23,6 +23,16 @@ UTP_WeaponComponent::UTP_WeaponComponent()
 
 void UTP_WeaponComponent::Fire()
 {
+	if (AmmoInClip <= 0)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Out of ammo!"));
+		return;
+	}else
+	{
+		AmmoInClip--;
+		UE_LOG(LogTemp, Warning, TEXT("%d bullets remaining"),AmmoInClip);
+	}
+
 	if (Character == nullptr || Character->GetController() == nullptr)
 	{
 		return;
