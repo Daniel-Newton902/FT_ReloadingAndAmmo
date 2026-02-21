@@ -42,9 +42,6 @@ public:
 	/** How much ammo have we got */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ammo", meta = (AllowPrivateAccess = "true"))
 	int AmmoInClip = 10;
-	/** How damage can we do */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ammo", meta = (AllowPrivateAccess = "true"))
-	int Damage;
 	/** Store our ammo type */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Ammo", meta = (AllowPrivateAccess = "true"))
 	UAmmoType* AmmoType;
@@ -64,6 +61,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Ammo")
 	int GetAmmoInClip();
 
+public:
+	UFUNCTION(BlueprintCallable, Category = "Ammo")
+	void SetNewAmmoType(UAmmoType* NewAmmoType);
 protected:
 	/** Ends gameplay for this component. */
 	UFUNCTION()

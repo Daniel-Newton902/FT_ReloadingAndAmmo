@@ -138,3 +138,9 @@ void UTP_WeaponComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
 		}
 	}
 }
+
+void UTP_WeaponComponent::SetNewAmmoType(UAmmoType* NewAmmoType)
+{
+	AmmoType = NewAmmoType;
+	AmmoInClip = AmmoType->AmmoCount;
+}
